@@ -14,8 +14,9 @@ export default defineConfig({
     ['html', { open: 'never' }],
     ['junit', { outputFile: 'test-results/junit.xml' }],
   ],
-  use: {
+ use: {
     baseURL: env.baseUrl,
+    testIdAttribute: 'data-test',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
